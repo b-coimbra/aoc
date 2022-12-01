@@ -8,10 +8,14 @@ fn parse(value: &str) -> i32 {
 }
 
 fn main() {
-    let chunks = INPUT
+    let mut chunks = INPUT
         .trim()
         .split("\n\n")
-        .map(parse);
+        .map(parse)
+        .collect::<Vec<i32>>();
 
-    println!("{}", chunks.max().unwrap())
+    chunks.sort();
+
+    println!("{:?}", chunks.last());
+    println!("{:?}", chunks.iter().rev().take(3).sum::<i32>());
 }
