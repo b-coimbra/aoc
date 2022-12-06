@@ -25,7 +25,7 @@ const base = crates[crates.length - 1];
 const moves = procedures.flatMap(parse).reverse();
 
 const move = (stack: Stack, position: Move): Stack => {
-    stack[position.to].push(stack[position.from].pop()!)
+    stack[position.to]?.push(stack[position.from].pop()!)
     return stack;
 };
 
@@ -44,7 +44,8 @@ const stacks = base.split('').reduce((acc, crate, i) => {
     return acc;
 }, [] as Stack);
 
-let answer = rearrange(stacks, moves);
+let answer = rearrange(stacks, moves)
+    .map(x => x.pop())
+    .join('');
 
-// console.log(stacks);
 console.log(answer);
