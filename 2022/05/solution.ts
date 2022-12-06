@@ -6,9 +6,8 @@ type Stack = string[][];
 type Crate = string[];
 type Move  = { from: number; to: number };
 
-const isBlank = (x: any) => x === ' ' || x === null || x === undefined;
-const isNum   = (x: any) => !isBlank(x) && !isNaN(Number(x));
-const isChar  = (x: any) => !isBlank(x) && isNaN(Number(x));
+const isNum = (x: any) => /\d/.test(x);
+const isChar = (x: any) => !isNum(x) && /\w/.test(x);
 
 const [crates, procedures] = input
     .split("\n\n")
