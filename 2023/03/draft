@@ -1,0 +1,36 @@
+        // current line leftside
+        // if (isNum(lines[row]?.at(col - 1))) {
+        //     let leftmost = lines[row].slice(0, col);
+
+        //     numbers.push(getNum(leftmost, -1));
+        // }
+
+        // // current line rightside
+        // if (isNum(lines[row]?.at(col + 1))) {
+        //     let rightmost = lines[row].slice(col + 1);
+
+        //     numbers.push(getNum(rightmost, 0));
+        // }
+
+        // // previous line rightmost
+        // if (isNum(lines[row - 1]?.at(col + 1))) {
+        //     let rightmost = lines[row - 1].slice(col);
+
+        //     numbers.push(getNum(rightmost, 0));
+        // }
+
+        // // previous line leftmost
+        // if (isNum(lines[row - 1]?.at(col - 1))) {
+        //     let leftmost = lines[row - 1].slice(0, col + 1);
+
+        //     numbers.push(getNum(leftmost, -1));
+        // }
+
+        // // next line leftmost
+        // if (isNum(lines[row + 1]?.at(col - 1))) {
+        //     // let leftmost = lines[row + 1].slice(col - 4);
+
+        //     console.log(col, ' ');
+
+        //     numbers.push(Number(seek(lines[row + 1], col)));
+        // }
