@@ -18,9 +18,6 @@ const indexOfAll = (list: any[], s: string): any[] =>
     list.map((x, i) => x === s ? i : '').filter(String);
 
 const seek = (str: string, pos: number): string => {
-    str = String(str);
-    pos = Number(pos);
-
     const left = str.slice(0, pos + 1).search(/\d+$/);
     const right = str.slice(pos).search(/\D/);
 
