@@ -48,7 +48,8 @@ const parse = (lines: string[], line: string, row: number): Schematic[] => {
             col = indexes[0];
 
         [row, row - 1, row + 1].map(position => numbers.push(
-            ...Array.from(new Set([col, col - 1, col + 1].map(column => seek(lines[position], column)).filter(x => x).map(Number)))
+            ...Array.from(new Set([col, col - 1, col + 1].map(column =>
+                seek(lines[position], column)).filter(x => x).map(Number)))
         ));
 
         mapped.push({ sym, row, col, numbers });
